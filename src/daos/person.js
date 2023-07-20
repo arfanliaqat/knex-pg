@@ -9,6 +9,10 @@ class PersonDAO {
       .returning('id');
     return id;
   }
+
+  async find() {
+    return this.db('person').select('*');
+  }
 }
 
 module.exports = PersonDAO;

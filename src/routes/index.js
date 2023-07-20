@@ -9,5 +9,6 @@ const personDao = new PersonDAO(db);
 const personService = new PersonService(personDao);
 const personController = new PersonController(personService);
 router.post('/person', personController.createPerson.bind(personController));
+router.get('/person', personController.findPerson.bind(personController));
 
 module.exports = router;
